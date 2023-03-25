@@ -6,26 +6,27 @@ permalink: /about/
 
 ![](/assets/IMG_2705%20copy.jpg)
 
-Hola! My name is Gael and in this blog I share my ideas, side projects and rarely some knowledge.
+Hola! My name is Gael and in this blog I share my ideas and side projects.
 
-I currently work as a business and IT consultant in Oslo, Norway. I normally take on roles as coach, advisor, teamlead or projectmanager. 
+I currently work as a business and IT consultant in Oslo, Norway. I normally take on roles as coach, advisor, teamlead or projectmanager.
 
-When I am not at work, I enjoy being active, playing sports, learning new things, making food & spending time with friends and family. I also spend way too much time working on business ideas. 
+When I am not at work, I enjoy being active, playing sports, learning new things, making food & spending time with friends and family. I also spend way too much time working on business ideas.
 
+<!---
 ## What you will find in this blog
 
 My work and side projects are for the most part related to one or more of my passions:
 
-* **People:** Health & happiness. Solving problems that matter. 
+* **People:** Health & happiness. Solving problems that matter.
 * **Technology:** Understand and take advantage of todays technology and learning the potential of future technologies in order to solve present and future problems.
-* **Innovation:** Find solutions to real problems. From idea to impact to scale. 
+* **Innovation:** Find solutions to real problems. From idea to impact to scale.
 
 In this blog I will share what I learn through my work and my sideprojects.
 
 Most of the time I will write about about my topics of interest outside of work: Innovation, digital products and services, software development (Web & app development), web3 (crypto, nft, metaverse), personal development, happiness, health, wealth, communication.
 
 Occasionaly I will write about work: Organizational performance (Organizations exist to solve problems for users through products and services) How can organizations solve the right problems faster and deliver more value to their users or customers?, Leadership, Organizational health, Having happy employees that solve real problems = happy customers, Agility as a way to increase organizational health & performance, DevOps and autonomous teams, Working remotely, Remote and hybrid teams.
-    
+
 
 ## A little about my past:
 
@@ -41,16 +42,4 @@ Occasionaly I will write about work: Organizational performance (Organizations e
 * Age 31: Work as consultant. Started GaelRivera.com & ActivePass(stay tuned)
 
 
-<!--- This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll --->
-
+--->
