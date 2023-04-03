@@ -5,8 +5,16 @@
   box-sizing: border-box;
 }
 
+/* Set height of html and body elements to 100% */
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes up at least the full viewport height */
 }
 
 /* Header styles */
@@ -118,34 +126,54 @@ footer p {
 main {
   padding-top: 9rem; /* Adjust the value based on the height of your header */
   padding-bottom: 2rem;
+  flex-grow: 1; /* Make main take up available vertical space */
+}
+
+/* General section styling */
+section {
+  width: 100vw; /* Set section width to 100% of the viewport width */
+  height: 100vh; /* Set section height to 100% of the viewport height */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack flex items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+/* Responsive section styling for smaller screens*/
+@media screen and (max-height: 600px) {
+section {
+height: auto; /* Set section height to adjust automatically based on content */
+min-height: 100vh; /* Set the minimum section height to 100% of the viewport height */
+padding: 2rem; /* Add some padding to avoid content being too close to the edges */
+}
 }
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-  .menu {
-      display: none;
-  }
+.menu {
+display: none;
+}
 
-  .hamburger-menu {
-      display: flex;
-  }
+.hamburger-menu {
+display: flex;
+}
 
-  .mobile-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      list-style-type: none;
-      padding: 1rem;
-  }
+.mobile-menu {
+display: none;
+position: absolute;
+top: 100%;
+right: 0;
+background-color: #ffffff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+list-style-type: none;
+padding: 1rem;
+}
 
-  .mobile-menu.show {
-      display: block;
-  }
+.mobile-menu.show {
+display: block;
+}
 
-  .mobile-menu li {
-      margin-bottom: 1rem;
-  }
+.mobile-menu li {
+margin-bottom: 1rem;
+}
 }

@@ -23,3 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
       mobileMenu.classList.toggle('show');
   });
 });
+
+// New code to handle smooth scrolling
+const navLinks = document.querySelectorAll(".menu a, .mobile-menu a");
+navLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const target = document.querySelector(link.getAttribute("href"));
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+        mobileMenu.classList.remove("show");
+    });
+});
