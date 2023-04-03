@@ -17,9 +17,10 @@ body {
   min-height: 100vh; /* Ensure body takes up at least the full viewport height */
 }
 
+
 /* Header styles */
 header {
-  position: fixed;
+  position: fixed; /* Bring back position: fixed; */
   top: 0;
   left: 0;
   right: 0;
@@ -92,13 +93,19 @@ nav {
 
 /* Footer styles */
 footer {
+  position: fixed; /* Add position: fixed; */
+  bottom: 0; /* Add bottom: 0; */
+  left: 0; /* Add left: 0; */
+  right: 0; /* Add right: 0; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem;
   background-color: #f8f8f8;
+  z-index: 1000; /* Ensure footer is on top of other content */
 }
+
 
 .social-icons {
   display: flex;
@@ -124,9 +131,10 @@ footer p {
 
 /* Main content styles */
 main {
-  padding-top: 9rem; /* Adjust the value based on the height of your header */
+  padding-top: 0rem; /* Adjust the value based on the height of your header */
   padding-bottom: 2rem;
   flex-grow: 1; /* Make main take up available vertical space */
+  margin-bottom: 5rem; /* Add margin-bottom equal to the height of the footer */
 }
 
 /* General section styling */
@@ -136,6 +144,8 @@ section {
   display: flex; /* Use flexbox for alignment */
   flex-direction: column; /* Stack flex items vertically */
   align-items: center; /* Center items horizontally */
+  justify-content: top; /* Center items vertically */
+  padding-top: 9rem;
 }
 
 /* Responsive section styling for smaller screens*/
