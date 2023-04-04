@@ -36,3 +36,13 @@ navLinks.forEach(link => {
         mobileMenu.classList.remove("show");
     });
 });
+
+window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+  
+    if (window.scrollY > 50) { // Adjust this value based on your preference
+      header.classList.add('transparent');
+    } else {
+      header.classList.remove('transparent');
+    }
+  });

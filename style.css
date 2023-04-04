@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Set height of html and body elements to 100% */
 html, body {
   height: 100%;
@@ -27,6 +31,11 @@ header {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+}
+
+/* Transparent header */
+header.transparent {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 nav {
@@ -146,6 +155,15 @@ section {
   align-items: center; /* Center items horizontally */
   justify-content: top; /* Center items vertically */
   padding-top: 9rem;
+}
+
+/* Add alternating background colors */
+section:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+
+section:nth-child(even) {
+  background-color: #e8e8e8;
 }
 
 /* Responsive section styling for smaller screens*/
