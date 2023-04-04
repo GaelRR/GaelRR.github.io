@@ -155,15 +155,16 @@ section {
   align-items: center; /* Center items horizontally */
   justify-content: top; /* Center items vertically */
   padding-top: 9rem;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
 }
 
 /* Add alternating background colors */
 section:nth-child(odd) {
-  background-color: #f8f8f8;
+  background-image: linear-gradient(to bottom, #ffffff 25%, #f8f8f8 95%);
 }
 
 section:nth-child(even) {
-  background-color: #e8e8e8;
+  background-image: linear-gradient(to bottom, #d0cdcd 25%, #f8f8f8 75%);
 }
 
 /* Responsive section styling for smaller screens*/
