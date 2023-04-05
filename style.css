@@ -202,7 +202,19 @@ padding: 1rem;
 display: block;
 }
 
+.mobile-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.mobile-menu li {
+  margin-left: 1.5rem;
+}
+
 .mobile-menu li {
 margin-bottom: 1rem;
 }
 }
+
+
