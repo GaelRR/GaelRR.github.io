@@ -156,15 +156,16 @@ section {
   justify-content: top; /* Center items vertically */
   padding-top: 9rem;
   background-attachment: fixed; /* Keep the background fixed while scrolling */
+  transition: background-color 3s ease-in-out;
 }
 
 /* Add alternating background colors */
 section:nth-child(odd) {
-  background-image: linear-gradient(to bottom, #ffffff 25%, #f8f8f8 95%);
+  background-image: linear-gradient(to bottom, #ffffff 10%, #f8f8f8 90%);
 }
 
 section:nth-child(even) {
-  background-image: linear-gradient(to bottom, #d0cdcd 25%, #f8f8f8 75%);
+  background-image: linear-gradient(to bottom, #f0efef 25%, #f8f8f8 75%);
 }
 
 /* Responsive section styling for smaller screens*/
