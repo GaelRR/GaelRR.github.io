@@ -47,4 +47,21 @@ window.addEventListener('scroll', function () {
     }
   });
 
+  window.addEventListener('scroll', function () {
+    const aboutSection = document.querySelector('#about');
+    const image = document.querySelector('.about-image img');
+    const rect = aboutSection.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    
+    let distanceFromTop = windowHeight - rect.top;
+    let distanceFromBottom = rect.bottom;
+    let minDistance = Math.min(distanceFromTop, distanceFromBottom);
+  
+    if (rect.top <= windowHeight && rect.bottom >= 0) {
+      const scaleFactor = 0.8 + 0.2 * (minDistance / windowHeight);
+      image.style.transform = `scale(${scaleFactor})`;
+    } else {
+      image.style.transform = 'scale(0.8)';
+    }
+  });
   
