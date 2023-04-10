@@ -155,6 +155,8 @@ section {
   align-items: center; /* Center items horizontally */
   justify-content: top; /* Center items vertically */
   padding-top: 7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background-attachment: fixed; /* Keep the background fixed while scrolling */
   transition: background-color 3s ease-in-out;
 }
@@ -179,7 +181,7 @@ section:nth-child(even) {
 .about-text {
   flex: 1;
   text-align: left; /* Change from center to left */
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
   padding-top: 2rem;
   margin: 0 auto; /* Add this line to center the about-text */
 }
@@ -203,12 +205,12 @@ section:nth-child(even) {
 
 /* Add your custom styles here */
 .about-text h2 {
-  font-size: 1em;
+  font-size: 1rem;
   color: #000000;
 }
 
 .about-text p {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   line-height: 1.6;
 }
 
