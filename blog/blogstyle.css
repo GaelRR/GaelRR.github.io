@@ -1,0 +1,14 @@
+.go-back-arrow {
+    position: fixed;
+    top: calc(100% - 60px); /* Adjust this value based on the height of your header */
+    left: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #333;
+    z-index: 1000;
+    transition: color 0.3s;
+  }
+  
+  .go-back-arrow:hover {
+    color: #666;
+  }
