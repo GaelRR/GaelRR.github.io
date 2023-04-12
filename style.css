@@ -9,7 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Set height of html and body elements to 100% */
 html, body {
   height: 100%;
 }
@@ -18,24 +17,18 @@ body {
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure body takes up at least the full viewport height */
+  min-height: 100vh;
 }
-
 
 /* Header styles */
 header {
-  position: fixed; /* Bring back position: fixed; */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-}
-
-/* Transparent header */
-header.transparent {
-  background-color: rgba(255, 255, 255, 0.8);
 }
 
 nav {
@@ -57,7 +50,6 @@ nav {
   color: #333;
 }
 
-/* Desktop menu styles */
 .menu {
   display: flex;
   list-style-type: none;
@@ -73,7 +65,6 @@ nav {
   color: #333;
   font-weight: 500;
 }
-
 /* Mobile menu styles */
 .mobile-menu {
   display: none;
@@ -85,7 +76,6 @@ nav {
   list-style-type: none;
   padding: 1rem;
 }
-
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -101,20 +91,20 @@ nav {
 }
 
 /* Footer styles */
+
 footer {
-  position: fixed; /* Add position: fixed; */
-  bottom: 0; /* Add bottom: 0; */
-  left: 0; /* Add left: 0; */
-  right: 0; /* Add right: 0; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem;
   background-color: #f8f8f8;
-  z-index: 1000; /* Ensure footer is on top of other content */
+  z-index: 1000;
 }
-
 
 .social-icons {
   display: flex;
@@ -140,28 +130,26 @@ footer p {
 
 /* Main content styles */
 main {
-  padding-top: 0rem; /* Adjust the value based on the height of your header */
-  padding-bottom: 2rem;
-  flex-grow: 1; /* Make main take up available vertical space */
-  margin-bottom: 5rem; /* Add margin-bottom equal to the height of the footer */
+  flex-grow: 1;
+  margin-bottom: 5rem;
 }
 
 /* General section styling */
+
 section {
-  width: 100vw; /* Set section width to 100% of the viewport width */
-  height: 100vh; /* Set section height to 100% of the viewport height */
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Stack flex items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: top; /* Center items vertically */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
   padding-top: 7rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  background-attachment: fixed;
   transition: background-color 3s ease-in-out;
 }
 
-/* Add alternating background colors */
 section:nth-child(odd) {
   background-image: linear-gradient(to bottom, #ffffff 10%, #f8f8f8 90%);
 }
@@ -170,7 +158,6 @@ section:nth-child(even) {
   background-image: linear-gradient(to bottom, #f0efef 25%, #f8f8f8 75%);
 }
 
-/* About section styles */
 .about-content {
   display: flex;
   align-items: center;
@@ -180,10 +167,9 @@ section:nth-child(even) {
 
 .about-text {
   flex: 1;
-  text-align: left; /* Change from center to left */
-  /* padding-left: 2rem; */
+	text-align: left;
   padding-top: 2rem;
-  margin: 0 auto; /* Add this line to center the about-text */
+  margin: 0 auto;
 }
 
 .about-image {
@@ -198,12 +184,10 @@ section:nth-child(even) {
   border-radius: 30px;
 }
 
-/* Smaller image when not in focus */
 :not(.in-focus) .about-image {
   transform: scale(0.8);
 }
 
-/* Add your custom styles here */
 .about-text h2 {
   font-size: 1rem;
   color: #000000;
@@ -219,13 +203,69 @@ section:nth-child(even) {
   color: #f7653b;
 }
 
+.down-arrow {
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.down-arrow:hover {
+  color: #666;
+}
+
+/* Blog section */
+.latest-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.latest-post {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.post-thumbnail {
+  width: 100%;
+  height: 150px; /* Increased height */
+  object-fit: cover;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.latest-post h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.latest-post p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Create some space between the last blog post link and the link to "all blog posts" */
+.blog-link {
+  margin-top: 2rem;
+}
+
 /* Responsive section styling for smaller screens*/
 @media screen and (max-height: 600px) {
-section {
-height: auto; /* Set section height to adjust automatically based on content */
-min-height: 100vh; /* Set the minimum section height to 100% of the viewport height */
-padding: 2rem; /* Add some padding to avoid content being too close to the edges */
-}
+  section {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem;
+  }
 }
 
 /* Media query for mobile devices */

@@ -14,3 +14,12 @@
   section {
     padding-top: 4rem;
   }
+
+  .post-image {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 300px; /* Set a max-width for large screens */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 1rem 0;
+  }

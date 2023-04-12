@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.ico">
@@ -75,6 +75,11 @@
             ...
         </section>
 
+            <!-- <Down arrow> -->
+        <a href="#about" class="down-arrow">
+            <i class="fas fa-chevron-down"></i>
+          </a>
+
 
         <!-- About Section -->
         <section class="section" id="about">
@@ -99,10 +104,9 @@
         <!-- Blog Section -->
         <section class="section" id="blog">
             <h1>Blog</h1>
-            <p>Here's where my blog posts will appear.</p>
-            <p> Until then you can access the blog here:</p>
-            <a href="/blog/blog.html"> Blog </a>
-            ...
+            <p>...</p>
+            <div class="latest-posts"></div>
+            <a href="/blog/blog.html" class="blog-link">View All Blog Posts</a>
         </section>
 
         <!-- Projects Section -->
@@ -130,5 +134,6 @@
     
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script src="getLatestPosts.js"></script>
 </body>
 </html>

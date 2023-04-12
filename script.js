@@ -65,3 +65,13 @@ window.addEventListener('scroll', function () {
     }
   });
   
+// Down arrow in first section
+  const downArrow = document.querySelector(".down-arrow");
+  downArrow.addEventListener("click", function (event) {
+  event.preventDefault();
+  const target = document.querySelector(downArrow.getAttribute("href"));
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+});
+
