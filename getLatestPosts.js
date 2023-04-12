@@ -22,10 +22,10 @@ async function fetchHTML(url) {
   
         const postElement = `
           <div class="latest-post">
+            <img class="post-thumbnail" src="${postThumbnail}" alt="${postTitle}">
             <a href="${postUrl}">
-              <img class="post-thumbnail" src="${postThumbnail}" alt="${postTitle}">
+              <h3>${postTitle}</h3>
             </a>
-            <h3>${postTitle}</h3>
             <p>${postDate}</p>
           </div>
         `;
