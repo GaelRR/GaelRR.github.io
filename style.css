@@ -249,6 +249,13 @@ section:nth-child(even) {
   margin-bottom: 0.5rem;
 }
 
+.latest-post a {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #000000;
+  text-decoration: none;
+}
+
 .latest-post p {
   font-size: 0.9rem;
   color: #888;
