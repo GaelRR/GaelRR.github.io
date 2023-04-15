@@ -19,6 +19,8 @@ async function fetchHTML(url) {
         const postTitle = postHTML.querySelector("h1").innerText;
         const postDate = postHTML.querySelector("p").innerText;
         const postThumbnail = postHTML.querySelector(".post-image img").src;
+        const postDescription = postHTML.querySelector(".post-description").innerText;
+
   
         const postElement = `
           <div class="latest-post">
@@ -26,8 +28,9 @@ async function fetchHTML(url) {
             <a href="${postUrl}">
               <h3>${postTitle}</h3>
             </a>
+            <p class="post-description">${postDescription}</p>
             <p>${postDate}</p>
-          </div>
+            </div>
         `;
   
         latestPostsContainer.insertAdjacentHTML("beforeend", postElement);

@@ -24,3 +24,13 @@
     border-radius: 5px;
     margin: 1rem 0;
   }
+
+  .post-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    color: #666;
+    max-width: 100%;
+    text-align: justify;
+  }
+  
