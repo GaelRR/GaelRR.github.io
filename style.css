@@ -150,6 +150,12 @@ section {
   transition: background-color 3s ease-in-out;
 }
 
+/* Blog post section styling */
+.blog-post-section {
+  height: auto; /* Set height to auto to accommodate the full content */
+  padding-bottom: 2rem; /* Add some padding at the bottom */
+}
+
 section:nth-child(odd) {
   background-image: linear-gradient(to bottom, #ffffff 10%, #f8f8f8 90%);
 }
