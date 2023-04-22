@@ -11,7 +11,6 @@
 
     <!-- Stylesheets and fonts -->
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/blog/blogstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -24,10 +23,25 @@
 <body>
 
      <!-- Header with navigation -->
-    <header>
+     <!-- Header with navigation -->
+     <header>
         <nav>
             <!-- Logo -->
-            <a href="/index.html#blog" class="logo"><img class="imagelogo" src="/assets/IMG_7498.JPG" alt=""></a>
+            <a href="index.html" class="logo"><img class="imagelogo" src="assets/IMG_7498.JPG" alt=""></a>
+            
+            <!-- Desktop menu -->
+            <ul class="menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+
+            <!-- Hamburger menu for mobile -->
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -39,8 +53,8 @@
             <h1>Blog</h1>
             <p>...</p>
             <ul>
-                <li><a href="post1.html">Creating a blog with ChatGPT</a> - 10 April 2023</li>
-                <li><a href="post2.html">My second post</a> - Coming soon</li>
+                <li><a href="/blog/post1.html">Creating a blog with ChatGPT</a> - 10 April 2023</li>
+                <li><a href="/blog/post2.html">My second post</a> - Coming soon</li>
                 <!-- Add more list items for new blog posts -->
               </ul>
         </section>

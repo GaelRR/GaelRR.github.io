@@ -27,15 +27,19 @@ document.addEventListener('DOMContentLoaded', function () {
 // New code to handle smooth scrolling
 const navLinks = document.querySelectorAll(".menu a, .mobile-menu a");
 navLinks.forEach(link => {
+  // Only handle internal links
+  if (link.getAttribute("href").startsWith("#")) {
     link.addEventListener("click", function (event) {
-        event.preventDefault();
-        const target = document.querySelector(link.getAttribute("href"));
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-        }
-        mobileMenu.classList.remove("show");
+      event.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+      mobileMenu.classList.remove("show");
     });
+  }
 });
+
 
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
