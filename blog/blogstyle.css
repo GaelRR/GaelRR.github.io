@@ -55,3 +55,9 @@
     margin: 1rem 0;
   }
   
+  ul {
+    padding-left: 20px;
+  }
+  ol {
+    padding-left: 20px;
+  }
