@@ -77,7 +77,7 @@ nav {
 }
 
 .menu a:hover {
-  color: #38d1c2; /* Teal for hover - cooler color */
+  color: #6b4a8c; /* Teal for hover - cooler color */
 }
 
 /* Mobile menu styles */
@@ -216,7 +216,7 @@ main {
 
 .about-text strong {
   font-weight: bold;
-  color: #38d1c2; /* Teal for strong emphasis */
+  color: #333; /* Lightpurple for strong emphasis */
 }
 
 /* Footer styles */
@@ -249,7 +249,7 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #38d1c2; /* Teal on hover */
+  color: #6b4a8c; /* Teal on hover */
 }
 
 footer p {
