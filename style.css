@@ -32,6 +32,7 @@ header {
   background-color: #ffffff;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 80px; /* Specify the height */
 }
 
 nav {
@@ -93,6 +94,13 @@ nav {
 .hamburger-menu span {
   height: 2px;
   background-color: #333;
+}
+
+/* Main content styling */
+main {
+  flex-grow: 1;
+  margin-top: 80px; /* Offset to account for fixed header */
+  padding: 1rem;
 }
 
 /* Hero section styles */
@@ -293,6 +301,11 @@ footer p {
 
   .about-text {
     padding-top: 0rem;
+  }
+
+  main {
+    margin-top: 70px; /* Adjust margin-top for mobile if header height differs */
+    padding: 0.5rem;
   }
 
   section {
