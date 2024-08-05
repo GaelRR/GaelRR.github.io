@@ -328,3 +328,52 @@ footer p {
     min-height: 100vh;
   }
 }
+
+/* Projects Page Styles */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: #333;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.project-card a:hover {
+  color: #38d1c2; /* Teal hover effect */
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
