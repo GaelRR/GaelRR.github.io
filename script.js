@@ -79,3 +79,12 @@ window.addEventListener('scroll', function () {
   }
 });
 
+// JavaScript for scroll effects
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) { // Change this value for sensitivity
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
