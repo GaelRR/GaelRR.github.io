@@ -377,3 +377,16 @@ footer p {
   transform: translateY(-5px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
+
+/* Target only the headings inside project pages */
+#project-detail h1,
+#project-detail h2,
+#project-detail h3 {
+  text-align: left;
+  width: 100%; /* Ensures proper alignment */
+}
+
+/* Ensure the section itself does not center everything */
+#project-detail {
+  align-items: flex-start !important;
+}
