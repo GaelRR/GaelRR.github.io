@@ -139,13 +139,20 @@ main {
   max-width: 600px;
 }
 
-/* About section styles */
+/* Default section styling (keeps centering for non-project sections) */
 .section {
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #ffffff; /* Simple white background */
+}
+
+/* Override alignment for project detail pages */
+#project-detail {
+  align-items: flex-start !important; /* Forces left alignment */
+  text-align: left !important;
+  width: 100%;
 }
 
 .about-content {
