@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'Gael Rivera',
+  description = 'Join me as I sharpen my writing skills, embrace humor, and share my journey of learning, growth, and entrepreneurship through projects, ideas, and a healthy dose of trial and error. Welcome to my unfiltered adventure!',
+  ogImage = '/assets/IMG_7498.JPG',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/assets/favicon.ico" />
+
+    <script is:inline>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gael Rivera" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
