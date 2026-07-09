@@ -1,43 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import aboutContent from '../data/about.md?raw';
+import { markdownToHtml } from '../utils/markdown';
+
+const aboutHtml = markdownToHtml(aboutContent);
 ---
 
 <BaseLayout title="About — Gael Rivera" description="Discover more about Gael Rivera, a problem solver passionate about people, innovation, and technology.">
-  <section class="about-hero">
-    <h1>Hello, I'm Gael Rivera</h1>
-    <p>Welcome to my world of creativity, technology, and innovation. Join me as I explore solutions that make life healthier, happier, and more exciting.</p>
-  </section>
+  <h1>Hello, I'm Gael Rivera</h1>
 
   <div class="about-layout">
-    <div class="about-layout__text prose">
-      <h2>About Me</h2>
-      <p>I'm a curious problem solver passionate about enhancing people's lives through technology, innovation, and empathy. With a blend of creativity and strategic thinking, I develop digital and physical solutions to help people live healthier, happier lives.</p>
-
-      <h3>My Passions</h3>
-      <ul>
-        <li><strong>People 💙:</strong> I am deeply committed to wellbeing and happiness, believing that technology and innovation should serve humanity.</li>
-        <li><strong>Innovation 💡:</strong> I love solving problems in novel ways, transforming ideas into services, products, and scalable businesses.</li>
-        <li><strong>Technology 🚀:</strong> Understanding how technology can address present and future challenges is my passion, using it as a tool to innovate and solve problems.</li>
-      </ul>
-
-      <p>My mission is to develop digital products and physical services that enhance well-being, spark joy, and bring fun into people's lives. I believe in the power of technology to create meaningful change.</p>
-
-      <h3>What's Important to Me</h3>
-      <p>Family, friends, and health are at the core of who I am. I cherish time spent with my loved ones and my partner Kaisa and daughter Eva. Beyond personal connections, I'm committed to protecting our planet and promoting health and wellbeing through sports, technology, and innovative solutions.</p>
-
-      <h3>My Professional Journey</h3>
-      <p>I hold a Bachelor's degree in Business Leadership & Management from Northern Illinois University and a Master's degree in Information Systems from Westerdals Oslo. My career spans the USA, Mexico, and Norway, where I've had the pleasure of working in diverse environments.</p>
-
-      <p>At Capra, where I've been since 2019, I've embraced roles such as team leader, project manager, agile coach, and advisor in retail, banking, and finance. My focus is on guiding organizations to define strategic directions, build technology-driven business strategies, and create effective teams. I thrive in helping businesses innovate and enhance their market positions.</p>
-
-      <p>Over the years, I've led teams in developing and implementing innovative services and products, always with the user's needs in mind. My aim is to make organizations more efficient and client-focused.</p>
-
-      <h3>On a Personal Note</h3>
-      <p>Outside of work, I'm a family man who loves sports and adventure. Whether hiking, playing sports, or exploring new technologies, I believe in living life to the fullest.</p>
-
-      <h3>Let's Connect</h3>
-      <p>I'm always eager to connect with like-minded individuals and explore new opportunities. Feel free to reach out via social media or drop me a message!</p>
-    </div>
+    <div class="about-layout__text prose" set:html={aboutHtml} />
 
     <figure class="about-layout__photo">
       <img src="/assets/IMG_2705 copy 2.jpg" alt="Gael Rivera" width="400" height="400" loading="lazy" />

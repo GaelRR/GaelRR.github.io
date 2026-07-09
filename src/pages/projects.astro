@@ -6,25 +6,33 @@ import { projects } from '../data/projects';
 <BaseLayout title="Projects — Gael Rivera">
   <h1>Projects</h1>
 
-  <ul class="project-list">
+  <ul class="project-index">
     {
       projects.map((project) => (
-        <li class="project-list__item">
-          <a class="project-list__link" href={`/projects/${project.slug}`}>
-            <img
-              class="project-list__image"
-              src={project.image}
-              alt=""
-              width="120"
-              height="120"
-              loading="lazy"
-            />
-            <span class="project-list__text">
-              <span class="project-list__name">{project.name}</span>
-              <span class="project-list__tagline">{project.tagline}</span>
-              <span class="project-list__summary">{project.summary}</span>
-            </span>
-          </a>
+        <li class="project-index__item">
+          {
+            project.showListImage && (
+              <img
+                class="project-index__thumb"
+                src={project.image}
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+              />
+            )
+          }
+          <div class="project-index__body">
+            <p class="project-index__line">
+              <a href={`/projects/${project.slug}`}>{project.name}</a>
+              {
+                project.year && (
+                  <span class="project-index__year">{project.year}</span>
+                )
+              }
+            </p>
+            <p class="project-index__desc">{project.tagline}</p>
+          </div>
         </li>
       ))
     }

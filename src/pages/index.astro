@@ -1,11 +1,46 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import GoodEnoughMeter from '../components/GoodEnoughMeter.astro';
 import { site } from '../config/site';
+import { getPublishedPosts, formatDate, postUrl } from '../utils/blog';
+
+const recentPosts = (await getPublishedPosts()).slice(0, 3);
 ---
 
 <BaseLayout>
-  <h1>
-    Welcome to my personal website<br />
-    Check out <a href="/blog">{site.blogName}</a>
-  </h1>
+  <div class="home">
+    <h1 class="home__title">Hi, I'm Gael.</h1>
+
+    <GoodEnoughMeter />
+
+    <p class="home__blog-link">
+      Read <a href="/blog">{site.blogName}</a> — honest words on learning,
+      building, and good enough.
+    </p>
+
+    {
+      recentPosts.length > 0 && (
+        <section class="home__recent" aria-labelledby="recent-posts-heading">
+          <h2 id="recent-posts-heading" class="home__recent-heading">
+            Recent posts
+          </h2>
+          <ul class="home__recent-list">
+            {recentPosts.map((post) => (
+              <li class="home__recent-item">
+                <a class="home__recent-link" href={postUrl(post.id)}>
+                  {post.data.title}
+                </a>
+                <time
+                  class="home__recent-date"
+                  datetime={post.data.pubDate.toISOString()}
+                >
+                  {formatDate(post.data.pubDate)}
+                </time>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </div>
 </BaseLayout>

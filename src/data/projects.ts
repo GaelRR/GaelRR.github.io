@@ -4,6 +4,7 @@ export interface Project {
   tagline: string;
   summary: string;
   image: string;
+  showListImage?: boolean;
   year?: number;
   url?: string;
   legacyUrl: string;
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     summary:
       'Specializing in strengthening cultural and tourist exchange between Galicia and southern Norway, offering organized trips, excursions, lodging, and comprehensive emigration advice.',
     image: '/assets/riasnorge.png',
+    showListImage: true,
     url: 'https://riasnorge.com/riasnorge',
     legacyUrl: '/projects/project1.html',
     body: `## Discover Two Worlds, Seamlessly Connected
@@ -63,6 +65,7 @@ Explore more at **[RiasNorge.com](https://riasnorge.com/riasnorge)**`,
     summary:
       'A personal hub for my projects, insights, and creative explorations.',
     image: '/assets/IMG_7498.JPG',
+    showListImage: false,
     legacyUrl: '/projects/project2.html',
     body: `## A Home for My Ideas, Projects, and Explorations
 
@@ -93,6 +96,7 @@ Whether you're a fellow creator, a developer, or just someone curious about my w
     summary:
       'A tool to find and explore active spots for fitness, sports, and outdoor adventures.',
     image: '/assets/ActivePass LOGO_1 Logo Orange.png',
+    showListImage: true,
     legacyUrl: '/projects/project3.html',
     body: `ActiveSpot finder is a tool that shows users every place where they can be active.`,
   },
@@ -103,6 +107,7 @@ Whether you're a fellow creator, a developer, or just someone curious about my w
     summary:
       "A practical framework for self-discovery, goal-setting, and intentional living, divided into three chapters to help you navigate life's complexities and create a fulfilling life.",
     image: '/assets/ian-schneider-TamMbr4okv4-unsplash.jpg',
+    showListImage: false,
     url: 'https://rainbow-enquiry-7b7.notion.site/LifeGuide-Journey-Your-personal-Guide-to-Living-Intentionally-4e8580fa19c34a6e9fafd5806a5a4463',
     legacyUrl: '/projects/project4.html',
     body: `## Introduction — What is LifeGuide Journey?
@@ -143,6 +148,7 @@ To delve deeper into the LifeGuide Journey framework and access additional resou
     summary:
       'Transforming workouts into a terminal-based adventure where every step is progress.',
     image: '/assets/ActiveQuestScreen.png',
+    showListImage: true,
     url: 'https://github.com/GaelRR/ActiveQuest',
     legacyUrl: '/projects/project5.html',
     body: `## Introduction — Why ActiveQuest?
