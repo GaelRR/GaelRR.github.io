@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../config/site';
 ---
 
-<BaseLayout title="The good enough blog — Gael Rivera">
-  <main>
-    <h1>The good enough blog</h1>
-  </main>
+<BaseLayout title={`${site.blogName} — ${site.name}`}>
+  <h1>{site.blogName}</h1>
 </BaseLayout>
