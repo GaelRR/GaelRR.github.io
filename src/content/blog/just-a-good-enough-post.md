@@ -1,7 +1,7 @@
 ---
 title: "Just a good enough post"
 pubDate: 2023-11-07
-description: "The post that started The good enough blog — on perfectionism, good enough, and learning in public."
+description: "The post that started The good enough blog, on perfectionism, good enough, and learning in public."
 legacyUrl: /blog/post2.html
 ---
 

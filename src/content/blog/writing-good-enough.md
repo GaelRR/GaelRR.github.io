@@ -1,7 +1,7 @@
 ---
 title: "Writing good enough"
 pubDate: 2023-11-09
-description: "On writing for myself in private and in public — and why good enough is enough for now."
+description: "On writing for myself in private and in public, and why good enough is enough for now."
 legacyUrl: /blog/post4.html
 ---
 

@@ -7,8 +7,6 @@ legacyUrl: /blog/post1.html
 
 ![Post Image](/assets/IMG_7498.JPG)
 
-How and why I built this website in a few hours for free using ChatGPT
-
 For the past week I have been building this site with the help of ChatGPT.
 
 I wanted to create a website to develop some skills and share some of my ideas.

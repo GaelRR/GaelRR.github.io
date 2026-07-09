@@ -19,11 +19,7 @@ Here is my simple but good enough prompt: "Create a picture of a man who is lear
 
 And here are the results:
 
-DALL-E
-
-![Dall-E](/assets/DALL·E .png)
-
-Stable Diffusion
+![Dall-E](</assets/DALL·E .png>)
 
 ![Stable Diffusion XL](/assets/StableDiffusion.png)
 

@@ -1,7 +1,7 @@
 ---
 title: "ActiveQuest: Gamifying Your Fitness Journey Through a Terminal-Based Adventure"
 pubDate: 2025-02-03
-description: "Why I built ActiveQuest — a terminal-based RPG that turns real-life fitness into a quest."
+description: "Why I built ActiveQuest, a terminal-based RPG that turns real-life fitness into a quest."
 legacyUrl: /blog/post10.html
 ---
 

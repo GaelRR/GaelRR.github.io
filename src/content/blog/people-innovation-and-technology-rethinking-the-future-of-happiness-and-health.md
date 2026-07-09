@@ -1,13 +1,11 @@
 ---
 title: "🚀 People, Innovation & Technology: Rethinking the Future of Happiness & Health"
 pubDate: 2025-03-11
-description: "A deep dive into how innovation and technology should serve happiness and health—not the other way around."
+description: "How innovation and technology should serve happiness and health, not the other way around."
 legacyUrl: /blog/post12.html
 ---
 
 ![Innovation and Happiness](/assets/innovation-happiness.jpg)
-
-A deep dive into how innovation and technology should serve happiness and health—not the other way around.
 
 ---
 

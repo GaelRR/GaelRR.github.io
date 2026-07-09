@@ -1,7 +1,7 @@
 ---
 title: "A good enough personal website"
 pubDate: 2023-11-08
-description: "One of my goals this year was to create and share my personal website — free, self-coded, and good enough to launch."
+description: "One of my goals this year was to create and share my personal website, free, self-coded, and good enough to launch."
 legacyUrl: /blog/post3.html
 ---
 

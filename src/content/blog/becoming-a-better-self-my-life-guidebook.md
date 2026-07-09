@@ -1,11 +1,11 @@
 ---
 title: "Becoming a better self - My Life Guidebook"
 pubDate: 2023-11-13
-description: "Introducing My Life Guidebook — a manual and tools for becoming the best version of myself."
+description: "Introducing My Life Guidebook, a manual and tools for becoming the best version of myself."
 legacyUrl: /blog/post8.html
 ---
 
-![Post Image](/assets/DALL·E 2023-11-13 20.14.51 - A serene and inviting home office space, bathed in soft, natural light. The room features a large wooden desk with an open laptop, surrounded by books.png)
+![Post Image](</assets/DALL·E 2023-11-13 20.14.51 - A serene and inviting home office space, bathed in soft, natural light. The room features a large wooden desk with an open laptop, surrounded by books.png>)
 
 Working on becoming a better self is good. 👍
 
