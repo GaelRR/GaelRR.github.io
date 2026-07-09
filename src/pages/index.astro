@@ -1,7 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config/site';
 ---
 
 <BaseLayout>
-  <h1>Welcome</h1>
+  <h1>
+    Welcome to my personal website<br />
+    Check out <a href="/blog">{site.blogName}</a>
+  </h1>
 </BaseLayout>
