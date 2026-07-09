@@ -8,12 +8,14 @@ interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  ogType?: 'website' | 'article';
 }
 
 const {
   title = site.name,
   description = site.description,
   ogImage = '/assets/IMG_7498.JPG',
+  ogType = 'website',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -42,12 +44,18 @@ const ogImageURL = new URL(ogImage, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={`${site.blogName} RSS`}
+      href="/rss.xml"
+    />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageURL} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={site.name} />
 
     <meta name="twitter:card" content="summary_large_image" />

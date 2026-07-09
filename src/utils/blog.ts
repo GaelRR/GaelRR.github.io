@@ -1,18 +1,25 @@
 import { getCollection, render } from 'astro:content';
 
-export async function getBlogPosts() {
-  const posts = await getCollection('blog');
+export type BlogPost = Awaited<ReturnType<typeof getPublishedPosts>>[number];
+
+export async function getPublishedPosts() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
   return posts.sort(
     (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
   );
 }
 
+/** @deprecated Use getPublishedPosts */
+export async function getBlogPosts() {
+  return getPublishedPosts();
+}
+
 export async function getBlogPost(slug: string) {
-  const posts = await getCollection('blog');
+  const posts = await getPublishedPosts();
   return posts.find((post) => post.id === slug);
 }
 
-export async function renderBlogPost(post: Awaited<ReturnType<typeof getBlogPosts>>[number]) {
+export async function renderBlogPost(post: BlogPost) {
   return render(post);
 }
 
@@ -22,4 +29,8 @@ export function formatDate(date: Date): string {
     month: 'long',
     year: 'numeric',
   });
+}
+
+export function postUrl(slug: string): string {
+  return `/blog/${slug}/`;
 }

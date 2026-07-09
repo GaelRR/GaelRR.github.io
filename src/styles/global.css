@@ -321,25 +321,63 @@ img {
 /* Prose (blog posts, project detail, about)                           */
 /* ------------------------------------------------------------------ */
 
+.prose {
+  color: var(--color-text);
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose > :last-child {
+  margin-bottom: 0;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: var(--space-2xl);
+}
+
+.prose h2:first-child,
+.prose h3:first-child {
+  margin-top: 0;
+}
+
+.prose p {
+  margin-bottom: var(--space-md);
+}
+
+.prose strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .prose img {
   display: block;
-  margin: var(--space-lg) 0;
+  width: 100%;
+  margin: var(--space-xl) 0;
+  border: 1px solid var(--color-border);
 }
 
 .prose ul,
 .prose ol {
-  margin: 0 0 var(--space-md);
-  padding-left: 1.25rem;
+  margin: 0 0 var(--space-lg);
+  padding-left: 1.35rem;
 }
 
 .prose li {
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.prose li::marker {
+  color: var(--color-text-muted);
 }
 
 .prose hr {
   border: 0;
   border-top: 1px solid var(--color-border);
-  margin: var(--space-xl) 0;
+  margin: var(--space-2xl) 0;
 }
 
 .prose blockquote {
@@ -349,32 +387,83 @@ img {
   color: var(--color-text-secondary);
 }
 
+.prose code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--color-border) 35%, transparent);
+}
+
+.prose pre {
+  overflow-x: auto;
+  margin: var(--space-lg) 0;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.prose pre code {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
 /* ------------------------------------------------------------------ */
 /* Blog                                                                */
 /* ------------------------------------------------------------------ */
 
+.blog-index__header {
+  margin-bottom: var(--space-2xl);
+}
+
+.blog-index__intro {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.blog-index__feed {
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
 .blog-list {
   list-style: none;
-  margin: var(--space-lg) 0 0;
+  margin: 0;
   padding: 0;
 }
 
 .blog-list__item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--space-sm) var(--space-md);
-  padding: var(--space-md) 0;
+  padding: var(--space-xl) 0;
   border-bottom: 1px solid var(--color-border);
 }
 
-.blog-list__link {
+.blog-list__item:first-child {
+  padding-top: 0;
+}
+
+.blog-list__entry {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.blog-list__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.blog-list__title a {
   color: var(--color-text);
   text-decoration: underline;
   text-decoration-color: var(--color-border);
+  text-underline-offset: 0.12em;
 }
 
-.blog-list__link:hover {
+.blog-list__title a:hover {
   color: var(--color-accent);
   text-decoration-color: var(--color-accent);
 }
@@ -382,17 +471,58 @@ img {
 .blog-list__date {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  white-space: nowrap;
+}
+
+.blog-list__description {
+  margin: 0;
+  color: var(--color-text-secondary);
+  max-width: 60ch;
 }
 
 .post__header {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.post__title {
+  margin-bottom: var(--space-md);
+}
+
+.post__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm) var(--space-lg);
 }
 
 .post__date {
-  display: block;
   font-size: var(--text-sm);
   color: var(--color-text-muted);
+}
+
+.post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post__tag {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.post__tag::before {
+  content: '#';
+  color: var(--color-accent);
+}
+
+.post__content {
+  font-size: var(--text-base);
+  line-height: 1.65;
 }
 
 /* ------------------------------------------------------------------ */

@@ -1,26 +1,41 @@
 ---
-import { getBlogPosts, formatDate } from '../../utils/blog';
+import { getPublishedPosts, formatDate, postUrl } from '../../utils/blog';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { site } from '../../config/site';
 
-const posts = await getBlogPosts();
+const posts = await getPublishedPosts();
 ---
 
 <BaseLayout title={`${site.blogName} — ${site.name}`}>
-  <h1>{site.blogName}</h1>
+  <header class="blog-index__header">
+    <h1>{site.blogName}</h1>
+    <p class="blog-index__intro">
+      Honest words on learning, growth, and building in public — good enough
+      is the goal.
+    </p>
+    <p class="blog-index__feed">
+      <a href="/rss.xml">RSS feed</a>
+    </p>
+  </header>
 
-  <ul class="blog-list">
+  <ol class="blog-list">
     {
       posts.map((post) => (
         <li class="blog-list__item">
-          <a class="blog-list__link" href={`/blog/${post.id}`}>
-            {post.data.title}
-          </a>
-          <span class="blog-list__date">
-            {formatDate(post.data.pubDate)}
-          </span>
+          <article class="blog-list__entry">
+            <h2 class="blog-list__title">
+              <a href={postUrl(post.id)}>{post.data.title}</a>
+            </h2>
+            <time
+              class="blog-list__date"
+              datetime={post.data.pubDate.toISOString()}
+            >
+              {formatDate(post.data.pubDate)}
+            </time>
+            <p class="blog-list__description">{post.data.description}</p>
+          </article>
         </li>
       ))
     }
-  </ul>
+  </ol>
 </BaseLayout>
