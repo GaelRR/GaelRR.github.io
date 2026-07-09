@@ -3,10 +3,12 @@ import { getCollection, render } from 'astro:content';
 export type BlogPost = Awaited<ReturnType<typeof getPublishedPosts>>[number];
 
 export async function getPublishedPosts() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.sort(
-    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
-  );
+  const posts = await getCollection('blog');
+  return posts
+    .filter((post) => post.data.draft !== true)
+    .sort(
+      (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+    );
 }
 
 /** @deprecated Use getPublishedPosts */
