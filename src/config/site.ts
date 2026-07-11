@@ -5,9 +5,9 @@ export const site = {
   blogName: 'The good enough blog',
   url: 'https://gaelrivera.com',
   nav: [
-    { label: 'About', href: '/about' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'Projects', href: '/projects' },
+    { label: 'About', href: '/about/' },
+    { label: 'Blog', href: '/blog/' },
+    { label: 'Projects', href: '/projects/' },
   ],
   social: [
     {

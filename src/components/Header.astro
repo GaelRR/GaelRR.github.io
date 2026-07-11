@@ -5,7 +5,12 @@ const currentPath = Astro.url.pathname;
 
 function isActive(href: string): boolean {
   if (href === '/') return currentPath === '/';
-  return currentPath.startsWith(href);
+  const base = href.replace(/\/$/, '');
+  return (
+    currentPath === base ||
+    currentPath === `${base}/` ||
+    currentPath.startsWith(`${base}/`)
+  );
 }
 ---
 
