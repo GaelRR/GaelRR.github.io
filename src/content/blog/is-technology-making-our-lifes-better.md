@@ -5,7 +5,7 @@ description: "A Sunday reflection on people, innovation, and whether technology 
 legacyUrl: /blog/post7.html
 ---
 
-![Post Image](/assets/DALL·E 2023-11-12 20.31.57 - A thought-provoking and harmonious image symbolizing the balance between technology and the quality of human life. The composition features a serene n.png)
+![Post Image](</assets/DALL·E 2023-11-12 20.31.57 - A thought-provoking and harmonious image symbolizing the balance between technology and the quality of human life. The composition features a serene n.png>)
 
 Is technology making our lifes better? - This is a question that I've been thinking about for many years now. I wish that the answer was a clear: "Absolutely!"
 

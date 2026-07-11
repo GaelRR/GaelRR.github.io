@@ -5,7 +5,7 @@ description: "On forgetting to post, being present, and not being too hard on yo
 legacyUrl: /blog/post9.html
 ---
 
-![Post Image](/assets/DALL·E 2023-11-15 12.57.30 - An image symbolizing self-compassion and personal growth for a blog. It shows a serene workspace with a laptop open on a blog post, surrounded by scat.png)
+![Post Image](</assets/DALL·E 2023-11-15 12.57.30 - An image symbolizing self-compassion and personal growth for a blog. It shows a serene workspace with a laptop open on a blog post, surrounded by scat.png>)
 
 In the process of working to be a better self we will have times where we might be too hard on ourselves. At least that is true for me.
 
