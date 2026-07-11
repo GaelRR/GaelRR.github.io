@@ -7,7 +7,10 @@ import { getPublishedPosts, formatDate, postUrl } from '../utils/blog';
 const recentPosts = (await getPublishedPosts()).slice(0, 3);
 ---
 
-<BaseLayout>
+<BaseLayout
+  title="Gael Rivera"
+  description="Personal site of Gael Rivera, with projects, writing, and learning in public."
+>
   <div class="home">
     <h1 class="home__title">Hi, I'm Gael.</h1>
 

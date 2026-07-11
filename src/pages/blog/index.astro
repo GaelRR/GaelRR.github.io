@@ -6,7 +6,10 @@ import { site } from '../../config/site';
 const posts = await getPublishedPosts();
 ---
 
-<BaseLayout title={`${site.blogName} — ${site.name}`}>
+<BaseLayout
+  title={`${site.blogName} — ${site.name}`}
+  description="Honest words on learning, growth, and building in public. Good enough is the goal."
+>
   <header class="blog-index__header">
     <h1>{site.blogName}</h1>
     <p class="blog-index__intro">

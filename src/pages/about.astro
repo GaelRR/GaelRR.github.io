@@ -9,11 +9,5 @@ const aboutHtml = markdownToHtml(aboutContent);
 <BaseLayout title="About — Gael Rivera" description="Discover more about Gael Rivera, a problem solver passionate about people, innovation, and technology.">
   <h1>Hello, I'm Gael Rivera</h1>
 
-  <div class="about-layout">
-    <div class="about-layout__text prose" set:html={aboutHtml} />
-
-    <figure class="about-layout__photo">
-      <img src="/assets/IMG_2705 copy 2.jpg" alt="Gael Rivera" width="400" height="400" loading="lazy" />
-    </figure>
-  </div>
+  <div class="prose" set:html={aboutHtml} />
 </BaseLayout>

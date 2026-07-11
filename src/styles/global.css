@@ -749,3 +749,34 @@ img {
     order: 2;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 404                                                                 */
+/* ------------------------------------------------------------------ */
+
+.not-found {
+  text-align: center;
+  padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+.not-found__code {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 12vw, 5rem);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-sm);
+  line-height: 1;
+}
+
+.not-found__title {
+  margin: 0 0 var(--space-md);
+}
+
+.not-found__text {
+  color: var(--color-text-secondary);
+  max-width: 28rem;
+  margin: 0 auto var(--space-lg);
+}
+
+.not-found__action {
+  margin: 0;
+}
