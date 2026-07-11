@@ -5,8 +5,6 @@ description: "How innovation and technology should serve happiness and health, n
 legacyUrl: /blog/post12.html
 ---
 
-![Innovation and Happiness](/assets/innovation-happiness.jpg)
-
 ---
 
 ## 🌍 What Drives Me
