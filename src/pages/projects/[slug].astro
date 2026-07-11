@@ -1,0 +1,45 @@
+---
+import { projects } from '../../data/projects';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../config/site';
+import { markdownToHtml } from '../../utils/markdown';
+
+export const getStaticPaths = (() =>
+  projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }))) satisfies GetStaticPaths;
+
+const { project } = Astro.props;
+const bodyHtml = markdownToHtml(project.body);
+---
+
+<BaseLayout title={`${project.name} — ${site.name}`} description={project.summary}>
+  <article class="project-detail">
+    <header class="project-detail__header">
+      <h1>{project.name}</h1>
+      <p class="project-detail__tagline">{project.tagline}</p>
+    </header>
+
+    <img
+      class="project-detail__image"
+      src={project.image}
+      alt={project.name}
+      width="200"
+      height="200"
+    />
+
+    <div class="prose" set:html={bodyHtml} />
+
+    {
+      project.url && (
+        <p class="project-detail__link">
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
+            Visit {project.name} →
+          </a>
+        </p>
+      )
+    }
+  </article>
+</BaseLayout>

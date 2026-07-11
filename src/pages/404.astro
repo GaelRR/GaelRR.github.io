@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page not found — Gael Rivera"
+  description="This page doesn't exist. Good enough reason to head home."
+>
+  <div class="not-found">
+    <p class="not-found__code" aria-hidden="true">404</p>
+    <h1 class="not-found__title">Not good enough to be found</h1>
+    <p class="not-found__text">
+      This page either never shipped or didn't meet the bar. Either way, you're
+      not missing much.
+    </p>
+    <p class="not-found__action">
+      <a href="/">Head home</a>
+    </p>
+  </div>
+</BaseLayout>

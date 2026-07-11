@@ -1,0 +1,43 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { formatDate } from '../utils/blog';
+import { site } from '../config/site';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  tags?: string[];
+}
+
+const { title, description, pubDate, tags = [] } = Astro.props;
+---
+
+<BaseLayout
+  title={`${title} — ${site.name}`}
+  description={description}
+  ogType="article"
+>
+  <article class="post">
+    <header class="post__header">
+      <h1 class="post__title">{title}</h1>
+      <div class="post__meta">
+        <time class="post__date" datetime={pubDate.toISOString()}>
+          {formatDate(pubDate)}
+        </time>
+        {
+          tags.length > 0 && (
+            <ul class="post__tags" aria-label="Tags">
+              {tags.map((tag) => (
+                <li class="post__tag">{tag}</li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+    </header>
+    <div class="post__content prose">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

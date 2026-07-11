@@ -1,0 +1,57 @@
+---
+import { HOME_BIOS, DEFAULT_BIO_INDEX } from '../data/homeBios';
+
+const max = HOME_BIOS.length - 1;
+---
+
+<div class="good-enough-meter">
+  <p
+    id="home-bio"
+    class="home__bio"
+    aria-live="polite"
+    data-default={DEFAULT_BIO_INDEX}
+  >
+    {HOME_BIOS[DEFAULT_BIO_INDEX]}
+  </p>
+
+  <div class="good-enough-meter__control">
+    <label class="good-enough-meter__label" for="bio-range">
+      Good Enough Meter
+    </label>
+    <input
+      id="bio-range"
+      class="good-enough-meter__range"
+      type="range"
+      min="0"
+      max={max}
+      value={DEFAULT_BIO_INDEX}
+      step="1"
+      aria-valuemin={0}
+      aria-valuemax={max}
+      aria-valuenow={DEFAULT_BIO_INDEX}
+      aria-valuetext={HOME_BIOS[DEFAULT_BIO_INDEX]}
+    />
+    <div class="good-enough-meter__ends" aria-hidden="true">
+      <span>too humble</span>
+      <span>too much</span>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ bios: HOME_BIOS }}>
+  (function () {
+    var bio = document.getElementById('home-bio');
+    var range = document.getElementById('bio-range');
+    if (!bio || !range) return;
+
+    function update() {
+      var index = Number(range.value);
+      bio.textContent = bios[index];
+      range.setAttribute('aria-valuenow', String(index));
+      range.setAttribute('aria-valuetext', bios[index]);
+    }
+
+    range.addEventListener('input', update);
+    update();
+  })();
+</script>

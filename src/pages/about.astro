@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import aboutContent from '../data/about.md?raw';
+import { markdownToHtml } from '../utils/markdown';
+
+const aboutHtml = markdownToHtml(aboutContent);
+---
+
+<BaseLayout title="About — Gael Rivera" description="Discover more about Gael Rivera, a problem solver passionate about people, innovation, and technology.">
+  <h1>Hello, I'm Gael Rivera</h1>
+
+  <div class="prose" set:html={aboutHtml} />
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { projects } from '../data/projects';
+---
+
+<BaseLayout
+  title="Projects — Gael Rivera"
+  description="Side projects and experiments in people, innovation, and technology."
+>
+  <h1>Projects</h1>
+
+  <ul class="project-index">
+    {
+      projects.map((project) => (
+        <li class="project-index__item">
+          {
+            project.showListImage && (
+              <img
+                class="project-index__thumb"
+                src={project.image}
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+              />
+            )
+          }
+          <div class="project-index__body">
+            <p class="project-index__line">
+              <a href={`/projects/${project.slug}`}>{project.name}</a>
+              {
+                project.year && (
+                  <span class="project-index__year">{project.year}</span>
+                )
+              }
+            </p>
+            <p class="project-index__desc">{project.tagline}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
