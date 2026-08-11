@@ -14,7 +14,7 @@ My mission is to develop digital products and physical services that enhance wel
 
 ### What's Important to Me
 
-Family, friends, and health are at the core of who I am. I cherish time spent with my loved ones and my partner Kaisa and daughter Eva. Beyond personal connections, I'm committed to protecting our planet and promoting health and wellbeing through sports, technology, and innovative solutions.
+Family, friends, and health are at the core of who I am. I cherish time spent with my loved ones, including my partner and my two kids. Beyond personal connections, I'm committed to protecting our planet and promoting health and wellbeing through sports, technology, and innovative solutions.
 
 ### My Professional Journey
 
