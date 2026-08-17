@@ -26,7 +26,7 @@ Over the years, I've led teams in developing and implementing innovative service
 
 ### On a Personal Note
 
-Outside of work, I'm a family man who loves sports and adventure. Whether hiking, playing sports, or exploring new technologies, I believe in living life to the fullest.
+Outside of work, I'm a family man who loves sports and adventure. I enjoy hiking, playing sports, and exploring new technologies.
 
 ### Let's Connect
 
